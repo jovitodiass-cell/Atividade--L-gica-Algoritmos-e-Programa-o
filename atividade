@@ -1,0 +1,143 @@
+Atividade 1:
+numero = int(input("Digite um número inteiro: "))
+
+if numero % 2 == 0:
+    print("O número é PAR.")
+else:
+    print("O número é ÍMPAR.")
+
+Atividade 2
+idade = int(input("Digite a idade: "))
+
+if idade <= 12:
+    print("Criança")
+elif idade <= 17:
+    print("Adolescente")
+elif idade <= 64:
+    print("Adulto")
+else:
+    print("Idoso")
+
+Atividade 3
+numero1 = float(input("Digite o primeiro número: "))
+numero2 = float(input("Digite o segundo número: "))
+
+print("Escolha uma operação:")
+print("+ - Soma")
+print("- - Subtração")
+print("* - Multiplicação")
+print("/ - Divisão")
+
+operacao = input("Digite a operação: ")
+
+if operacao == "+":
+    resultado = numero1 + numero2
+elif operacao == "-":
+    resultado = numero1 - numero2
+elif operacao == "*":
+    resultado = numero1 * numero2
+elif operacao == "/":
+    if numero2 != 0:
+        resultado = numero1 / numero2
+    else:
+        resultado = "Não é possível dividir por zero."
+else:
+    resultado = "Operação inválida."
+
+print("Resultado:", resultado)
+
+Atividade 4
+a = float(input("Digite o primeiro lado: "))
+b = float(input("Digite o segundo lado: "))
+c = float(input("Digite o terceiro lado: "))
+
+if a + b <= c or a + c <= b or b + c <= a:
+    print("Os lados não formam um triângulo.")
+elif a == b and b == c:
+    print("Triângulo Equilátero.")
+elif a == b or a == c or b == c:
+    print("Triângulo Isósceles.")
+else:
+    print("Triângulo Escaleno.")
+
+Atividade 5
+import math
+
+a = float(input("Digite o valor de a: "))
+b = float(input("Digite o valor de b: "))
+c = float(input("Digite o valor de c: "))
+
+delta = b ** 2 - 4 * a * c
+
+print("Delta =", delta)
+
+if delta > 0:
+    x1 = (-b + math.sqrt(delta)) / (2 * a)
+    x2 = (-b - math.sqrt(delta)) / (2 * a)
+
+    print("Duas raízes reais distintas.")
+    print("X1 =", x1)
+    print("X2 =", x2)
+
+elif delta == 0:
+    x = -b / (2 * a)
+
+    print("Uma raiz real.")
+    print("X =", x)
+
+else:
+    print("Não possui raízes reais.")
+
+Atividade 6
+temperatura = float(input("Digite a temperatura da água em °C: "))
+
+if temperatura < 0:
+    print("A água está no estado SÓLIDO.")
+elif temperatura < 100:
+    print("A água está no estado LÍQUIDO.")
+else:
+    print("A água está no estado GASOSO.")
+
+Atividade 7 
+nome = input("Digite o nome do corretor: ")
+venda = float(input("Digite o valor da venda: R$ "))
+
+if venda <= 500000:
+    percentual = 0.06
+elif venda <= 700000:
+    percentual = 0.085
+elif venda <= 1000000:
+    percentual = 0.10
+else:
+    percentual = 0.12
+
+comissao = venda * percentual
+
+print("\n--- RELATÓRIO ---")
+print("Corretor:", nome)
+print(f"Valor da venda: R$ {venda:.2f}")
+print(f"Comissão: R$ {comissao:.2f}")
+
+Atividade 8
+nome = input("Digite o nome do hóspede: ")
+dias = int(input("Quantos dias o hóspede ficou? "))
+
+diaria = 290.00
+
+if dias > 7:
+    taxa = 6.50
+elif dias == 7:
+    taxa = 12.00
+else:
+    taxa = 16.50
+
+valor_hospedagem = diaria * dias
+valor_taxa = taxa * dias
+total = valor_hospedagem + valor_taxa
+
+print("\n--- CONTA DO HÓSPEDE ---")
+print("Hóspede:", nome)
+print("Dias hospedado:", dias)
+print(f"Valor da hospedagem: R$ {valor_hospedagem:.2f}")
+print(f"Taxa de serviço: R$ {valor_taxa:.2f}")
+print(f"Total a pagar: R$ {total:.2f}")
